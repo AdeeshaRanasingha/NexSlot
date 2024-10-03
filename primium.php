@@ -122,10 +122,11 @@
                 <input type="hidden" name="slot" id="selectedSlot">
                 
                 <button type="submit" class="submit-btn" name="submit">Submit</button><br>
+                
             
             </form>
             </div>
-            
+            <button type="submit" class="submit-btn"  onclick="location.href = 'viewReservationPremium.php';">View Reservation</button><br>
         </section>
     </div>
     <SCRIPT src="js\primium.js"></SCRIPT>

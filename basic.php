@@ -59,7 +59,7 @@
       <input type="submit" class="button" />
 
       <!-- View Reservations button -->
-      <a href="PHP/view_reservations.php" class="button">View Reservations</a>
+      <a href="viewReservationBasic.php" class="button" >View Reservations</a>
     </form>
   </body>
 
