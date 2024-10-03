@@ -1,27 +1,10 @@
 <?php
-<<<<<<< Updated upstream
-    session_start();
-    if(!isset($_SESSION["submit"])){
-        include("loginHeader.php");
-    }
-    else{
-        include("header.php");
-=======
-<<<<<<< HEAD
-include("header.php");
+session_start();
 if (!isset($_SESSION["submit"])) {
-    header('location: login.php?error=login-first');
+    include("loginHeader.php");
+} else {
+    include("header.php");
 }
-=======
-    session_start();
-    if(!isset($_SESSION["submit"])){
-        include("loginHeader.php");
->>>>>>> Stashed changes
-    }
-    else{
-        include("header.php");
-    }
->>>>>>> 4508916f8ad8f33fefd733ab19f699bbeb5b78ae
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,9 +22,7 @@ if (!isset($_SESSION["submit"])) {
     <main>
         <section class="pricing-section">
             <h1>Pricing</h1>
-            <p class="subtext"> Explore our flexible pricing plans designed to suit your parking needs.</p>
-
-
+            <p class="subtext">Explore our flexible pricing plans designed to suit your parking needs.</p>
 
             <div class="pricing-cards">
                 <!-- Basic Plan Card -->
@@ -50,7 +31,7 @@ if (!isset($_SESSION["submit"])) {
                         <span class="plan-title">Basic</span>
                     </div>
                     <div class="card-price">
-                        <span class="price">Free</span>
+                        <span class="price">free</span>
                     </div>
                     <form action="" method="POST">
                         <button class="cta-button" name="free">Let's Get Started</button>

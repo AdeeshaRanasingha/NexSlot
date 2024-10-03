@@ -1,27 +1,10 @@
 <?php
-<<<<<<< Updated upstream
-    session_start();
-    if(!isset($_SESSION["submit"])){
-        include("loginHeader.php");
-    }
-    else{
-        include("header.php");
-=======
-<<<<<<< HEAD
-include("header.php");
+session_start();
 if (!isset($_SESSION["submit"])) {
-    header('location: login.php?error=login-first');
+    include("loginHeader.php");
+} else {
+    include("header.php");
 }
-=======
-    session_start();
-    if(!isset($_SESSION["submit"])){
-        include("loginHeader.php");
->>>>>>> Stashed changes
-    }
-    else{
-        include("header.php");
-    }
->>>>>>> 4508916f8ad8f33fefd733ab19f699bbeb5b78ae
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,14 +65,17 @@ if (!isset($_SESSION["submit"])) {
                 <div class="card"><img src="images\im7.jpg" alt="Card 2">
                     <div class="container" id="container">
                         <h4><b>Parking solutions</b></h4>
-
-                        <p>Our Parking Solutions offer an integrated and hassle-free way to find parking spaces quickly
-                            and efficiently. Our goal is to streamline parking for all drivers by offering convenience,
-                            security, and
-                            efficiency through our advanced parking management system.
-
-
-                            <button onclick="myFunction2()" id="myBtn">Read more</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+                            nulla et dictum interdum, nisi lorem egestas vitae
+                            scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor.
+                                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+                                augue ut aliquet
+                                Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                                venenatis imperdiet sed ornare turpis.
+                                Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                                fermentum.
+                                Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button onclick="myFunction2()" id="myBtn">Read more</button>
                     </div>
                 </div>
             </div>
@@ -117,8 +103,7 @@ if (!isset($_SESSION["submit"])) {
     <!-- Heading Section -->
     <section class="info">
         <h2>Experience Seamless Parking</h2>
-        <p>Transform your parking experience with our state-of-the-art automated system.
-        </p>
+        <p>Transform your parking experience with our state-of-the-art automated system.</p>
         <button>Get Started</button>
         <button>Learn More</button>
     </section>
@@ -161,7 +146,7 @@ if (!isset($_SESSION["submit"])) {
             </div>
         </div>
         <div class="faq-item"></div>
-        <button class="accordion">What are the advantages of using premium package?</button>
+        <button class="accordion">What are the advantages of using premium packege?</button>
         <div class="panel">
             <p><i>The <b>premium package</b> offers several benefits, including priority parking
                     access,
@@ -171,8 +156,7 @@ if (!isset($_SESSION["submit"])) {
                     electric
                     vehicles, and exclusive <mark>24/7 support</mark>. It ensures a hassle-free, quick, and enhanced
                     parking
-                    experience.</i>
-            </p>
+                    experience.</i></p>
         </div>
         </div>
     </section>

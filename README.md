@@ -18,7 +18,7 @@ NexSlot is a web-based platform designed to handle various aspects of vehicle re
 ## Features
 
 - **Admin Dashboard**: Manage vehicle reservations, customer details, and more.
-- **User Registration and Reservation**: Reserve vehicles, packages, and services through various registration forms
+- **User Registration and Reservation**: Reserve vehicles, packages, and services through various registration forms.
 - **Customer Support**: Dedicated sign-in page for customer support representatives to manage customer queries and tickets.
 - **Feedback and Contact Forms**: Collect feedback and inquiries from users.
 - **Different Packages & Payment Pages**: Choose from various packages and proceed with payments.
