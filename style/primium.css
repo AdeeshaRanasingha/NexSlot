@@ -1,0 +1,145 @@
+*{
+    
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    justify-content: center;
+}
+body{
+    
+    background-color: #f4f4f4;
+    
+}
+h1{
+    margin-top: 20px;
+    color: rgb(70,24,86);
+    text-align: center;
+    font-size: 30px;
+}
+h2{
+    text-align: center;
+}
+.border-line{
+width: 100%; 
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px; 
+  border: 1px solid #ddd;
+  border-radius: 10px; 
+  height: 80%;
+  background-color: #46aef8c8;
+  margin-bottom: 40px;
+  
+  
+}
+.slot-grid{
+    display:grid;
+    grid-template-columns: 55px 0.2fr;
+    margin-right: 20px;
+}
+.border-grid{
+    margin-left: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.flow-row{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding:10px;
+    border:10px;
+}
+.floor{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+}
+.slot{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-right: 200px;
+}
+.floor-number{
+    text-align: center;
+    font-size: 25px;
+    padding-right: 50px;
+}
+.floor-slots{
+    display:flex;
+    gap:15px;
+}
+.floor-slots button{
+    background-color: #001f3f; 
+    color: white;
+    border: none;
+    padding:15px;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: bacground-color 0.3s;
+    font-size: 16px;
+    width:50px;
+    margin-top: 10px;
+}
+.floor-slots button:hover{
+    transform:scale(1.1);
+    transition: transform 0.3s ease;
+}
+p{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+}
+.reservationdetails{
+    margin-left: 350px;
+}
+label{
+
+    font-family: "Kanit", sans-serif; /* Use the Kanit font */
+  font-weight: 800; /* Bold font weight */
+  font-style: normal; /* Regular style for text */
+}
+button#add-vehicle{
+    background-color:#001f3f;
+    color: white;
+    border: none;
+    padding:10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+input{
+  width: 50%; /* Full width input fields */
+  padding: 10px; /* Padding inside the input fields */
+  font-size: 16px; /* Font size for input text */
+  border: 1px solid #ccc; /* Light gray border for input fields */
+  border-radius: 5px; /* Rounded corners for input fields */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's width and height */
+}
+select{
+    font-size:16px;
+    width: 50%;
+    padding:10px;
+    border: 1px solid #ccc; /* Light gray border for input fields */
+  border-radius: 5px; /* Rounded corners for input fields */
+  box-sizing: border-box; /* Ensure padding and border are included in the elem*/
+}
+.submit-btn{
+    background-color:#001f3f;
+    padding:10px 20px;
+    font-size:16px;
+    margin-top: 20px;
+    border:none;
+    color: white;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
