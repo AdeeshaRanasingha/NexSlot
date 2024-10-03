@@ -1,8 +1,10 @@
 <?php
-    include("header.php");
-    //to check wether the user has visited the site by clicking the submit button
+    session_start();
     if(!isset($_SESSION["submit"])){
-        header('location: login.php?error=login-first');
+        include("loginHeader.php");
+    }
+    else{
+        include("header.php");
     }
 ?>
 <!DOCTYPE html>

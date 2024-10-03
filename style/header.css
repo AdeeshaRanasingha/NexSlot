@@ -39,9 +39,11 @@ img{
 }
 .signin {
     display: flex;
+    background-color: rgb(15, 147, 235);
     align-items: center;
     gap: 10px; /* space between image and name */
     text-decoration: none; /* remove underline */
+    padding: 10px;
 }
 
 .signin a {
@@ -55,6 +57,32 @@ img{
 }
 
 .signin img {
+    width: 40px; /* profile image size */
+    height: 40px;
+    border-radius: 50%; /* circular image */
+    object-fit: cover; /* make sure the image fits inside the circle */
+    margin-right: 10px; /* space between the image and the name */
+}
+
+.name {
+    display: flex;
+    
+    align-items: center;
+    gap: 10px; /* space between image and name */
+    text-decoration: none; /* remove underline */
+}
+
+.name a {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* remove underline */
+    color: rgb(247, 247, 247); /* text color */
+    
+    gap: 10px;
+}
+
+.name img {
     width: 40px; /* profile image size */
     height: 40px;
     border-radius: 50%; /* circular image */

@@ -1,8 +1,11 @@
 
 <?php
-    include("header.php");
+    session_start();
     if(!isset($_SESSION["submit"])){
-        header('location: login.php?error=login-first');
+        include("loginHeader.php");
+    }
+    else{
+        include("header.php");
     }
 ?>
 

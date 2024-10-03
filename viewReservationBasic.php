@@ -1,6 +1,14 @@
 <?php
     require_once 'database.php';
-    include("header.php");
+    
+    session_start();
+    if(!isset($_SESSION["submit"])){
+        include("loginHeader.php");
+    }
+    else{
+        include("header.php");
+    }
+
 
     // Delete admin data
 if (isset($_GET['delete_id'])) {
