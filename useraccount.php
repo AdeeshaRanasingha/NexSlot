@@ -34,8 +34,13 @@
                     <li>Name: <?php echo $_SESSION['name']; ?></li>
                     <li>Email: <?php echo $_SESSION['email']; ?></li>
                 </ul>
-                <button class="payment-btn">Payment</button>
-                <button class="delete-account-btn">Delete Account</button>
+
+                <form method="POST" action="useraccountINC.php">
+                <button class="payment-btn" name="payment">Payment</button>
+                <button class="delete-account-btn" name="delete">Delete Account</button>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <button class="delete-account-btn" name="logout">Logout</button>
+                </form>
             </div>
 
             

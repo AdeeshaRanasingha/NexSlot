@@ -1,4 +1,5 @@
 <?php
+    require_once 'database.php';
     session_start();
     if(!isset($_SESSION["submit"])){
         include("loginHeader.php");
@@ -27,7 +28,7 @@
 
                     <div class="form-group">
                         <label for="amount">Amount</label>
-                        <input type="text" id="amount" name="amount" placeholder="XXX XXX XXX" readonly>
+                        <input type="text" id="amount" name="amount" placeholder="XXX XXX XXX" required>
                     </div>
 
                     <div class="form-group">
@@ -50,16 +51,16 @@
 
                     <div class="form-group">
                         <label for="card-number">Card Number</label>
-                        <input type="text" id="card-number" name="card_number" placeholder="Enter card number">
+                        <input type="text" id="card-number" name="card_number" placeholder="Enter card number" required>
                 
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
         
                         <label for="expiry-date">Expiry Date</label>
-                        <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY">
+                        <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY" required>
 
                         <label for="cvv-code">CVV Code</label>
-                        <input type="text" id="cvv-code" name="cvv_code" placeholder="CVV">
+                        <input type="text" id="cvv-code" name="cvv_code" placeholder="CVV" required>
                     </div>
 <br><br>
                     <div class="button-group">
@@ -86,11 +87,11 @@
     include("footer.php");
 ?>
 <?php
-    if(isset($_POST["premium"]) and isset($_POST[""])){
+    if(isset($_POST["premium"]) or isset($_POST["pay"])){
         
             $sql = "UPDATE users SET package = 'premium' WHERE email = '{$_SESSION['email']}'";
             $result = mysqli_query($conn , $sql);
-            header('location:useraccount.php');
+            
         
     }
 ?>

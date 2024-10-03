@@ -34,7 +34,7 @@ if (!isset($_SESSION["submit"])) {
                         <span class="price">free</span>
                     </div>
                     <form action="" method="POST">
-                        <button class="cta-button" name="free">Let's Get Started</button>
+                        <button class="cta-button" name="free" onclick="confirmation()">Let's Get Started</button>
                     </form>
                     <ul class="features-list">
                         <li>Free for one user</li>
@@ -54,7 +54,7 @@ if (!isset($_SESSION["submit"])) {
                     </div>
                     <form action="payment.php" method="POST">
                         <button class="cta-button" name="premium"
-                            onclick='window.location.href = "https://www.example.com";'>Let's Get Started</button>
+                            onclick='window.location.href = "payment.php";'>Let's Get Started</button>
                     </form>
                     <ul class="features-list">
                         <li>Max 5 users</li>
@@ -85,7 +85,7 @@ if (isset($_POST["free"])) {
     $sql = "UPDATE users SET package = 'basic' WHERE email = '{$_SESSION['email']}'";
     $result = mysqli_query($conn, $sql);
 
-    header('location:useraccount.php');
+    
 
 }
 

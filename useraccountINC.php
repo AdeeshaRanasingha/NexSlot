@@ -1,5 +1,5 @@
 <?php
-
+require_once 'database.php';
 
 //taking the data from the form
 if(isset($_POST['submit'])){
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
 
 
 
-    require_once 'database.php';
+   
 
     //updating the database
     $sql = "UPDATE users set name = '$name' , vehicleNo = '$vehicle' , contactNo = '$contact', file = '$file_name' WHERE email = '$email'";
@@ -50,4 +50,32 @@ if(isset($_POST['submit'])){
         }
             
         }
+}
+if(isset($_POST['logout'])){
+
+    session_start();
+
+    // Destroy the session and clear session data
+    session_unset();
+    session_destroy();
+
+    // Redirect to the login page
+    header("Location: login.php");
+    exit();
+
+}
+
+if(isset($_POST['delete'])){
+
+    session_start();
+    $sql = "DELETE FROM users WHERE email='{$_SESSION['email']}'";
+    $result = mysqli_query($conn, $sql);
+    header("Location: login.php");
+
+}
+
+if(isset($_POST['payment'])){
+
+    header("Location: payment.php");
+
 }
