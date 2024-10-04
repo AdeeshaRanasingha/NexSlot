@@ -37,56 +37,56 @@ for (let i = 0; i < accordions.length; i++) {
 
 //java sript for card
 function myFunction1() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
+    var dots = document.getElementById("dots1");
+    var moreText = document.getElementById("more1");
+    var btnText = document.getElementById("myBtn1");
 
     if (dots.style.display === "none") {
       dots.style.display = "inline";
       btnText.innerHTML = "Read more";
       moreText.style.display = "none";
-      document.getElementById("card").style.height="550px";
+      document.getElementById("card1").style.height="550px";
     } else {
       dots.style.display = "none";
       btnText.innerHTML = "Read less";
       moreText.style.display = "contents";
-      document.getElementById("card").style.height="800px";
+      document.getElementById("card1").style.height="800px";
     }
   }
 
   function myFunction2() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
+    var dots = document.getElementById("dots2");
+    var moreText = document.getElementById("more2");
+    var btnText = document.getElementById("myBtn2");
 
     if (dots.style.display === "none") {
       dots.style.display = "inline";
       btnText.innerHTML = "Read more";
       moreText.style.display = "none";
-      document.getElementById("card").style.height="550px";
+      document.getElementById("card2").style.height="550px";
     } else {
       dots.style.display = "none";
       btnText.innerHTML = "Read less";
       moreText.style.display = "contents";
-      document.getElementById("card").style.height="800px";
+      document.getElementById("card2").style.height="800px";
     }
   }
 
   function myFunction3() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
+    var dots = document.getElementById("dots3");
+    var moreText = document.getElementById("more3");
+    var btnText = document.getElementById("myBtn3");
 
     if (dots.style.display === "none") {
       dots.style.display = "inline";
       btnText.innerHTML = "Read more";
       moreText.style.display = "none";
-      document.getElementById("card").style.height="550px";
+      document.getElementById("card3").style.height="550px";
     } else {
       dots.style.display = "none";
       btnText.innerHTML = "Read less";
       moreText.style.display = "contents";
-      document.getElementById("card").style.height="800px";
+      document.getElementById("card3").style.height="800px";
     }
   }
   
