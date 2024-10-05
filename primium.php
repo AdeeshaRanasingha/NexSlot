@@ -78,10 +78,10 @@
                                 <div class="floor-row">
                                     <td><div class="floor-number">4</div></td>
                                     <td><div class="floor-slots">
-                                        <button>A</button><button>B</button><button>C</button>
-                                        <button>D</button><button>E</button><button>F</button>
-                                        <button>G</button><button>H</button><button>I</button>
-                                        <button>J</button><button>K</button>
+                                        <button onclick="selectSlot(4, 'A')">A</button><button onclick="selectSlot(4, 'B')">B</button><button onclick="selectSlot(4, 'C')">C</button>
+                                        <button onclick="selectSlot(4, 'D')">D</button><button onclick="selectSlot(4, 'E')">E</button><button onclick="selectSlot(4, 'F')">F</button>
+                                        <button onclick="selectSlot(4, 'G')">G</button><button onclick="selectSlot(4, 'H')">H</button><button onclick="selectSlot(4, 'I')">I</button>
+                                        <button onclick="selectSlot(4, 'J')">J</button><button onclick="selectSlot(4, 'K')">K</button>
                                         </div></td>
                                 </div>
                             </tr>
@@ -89,10 +89,10 @@
                                 <div class="floor-row">
                                     <td><div class="floor-number">5</div></td>
                                     <td><div class="floor-slots">
-                                        <button>A</button><button>B</button><button>C</button>
-                                        <button>D</button><button>E</button><button>F</button>
-                                        <button>G</button><button>H</button><button>I</button>
-                                        <button>J</button><button>K</button>
+                                        <button onclick="selectSlot(5, 'A')">A</button><button onclick="selectSlot(4, 'B')">B</button><button onclick="selectSlot(4, 'C')">C</button>
+                                        <button onclick="selectSlot(5, 'D')">D</button><button onclick="selectSlot(4, 'E')">E</button><button onclick="selectSlot(4, 'C')">F</button>
+                                        <button onclick="selectSlot(5, 'G')">G</button><button onclick="selectSlot(4, 'H')">H</button><button onclick="selectSlot(4, 'C')">I</button>
+                                        <button onclick="selectSlot(5, 'J')">J</button><button onclick="selectSlot(4, 'K')">K</button>
                                         </div></td>
                                 </div>
                             </tr>

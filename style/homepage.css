@@ -62,7 +62,12 @@ body {
     height: 100px;
 }
 
-#more {display: none;}
+#more1 {display: none;}
+
+#more2 {display: none;}
+
+#more3 {display: none;}
+
 .column {
     float:right;
     width: 100%;
@@ -93,12 +98,16 @@ body {
    color: #04013d;
    
 }
-#myBtn {
+.mybtn {
     background: #032f5c;
     padding: 10px 20px;
     color: #f1f1f1f1;
     border-radius: 10px;
+    cursor: pointer;
     
+}
+.mybtn:hover{
+    background-color: #0b59a7;
 }
 .card img{
     width: 100%;
@@ -124,6 +133,9 @@ body {
     border: none;
     cursor: pointer;
 }
+.info button:hover{
+    background-color: #2c1fe7;
+}
 
 /* FAQ Section */
 .faq {
@@ -131,6 +143,10 @@ body {
 }
 .faq h2{
     color:#04013d;
+    text-align: center;
+}
+.faq p{
+    text-align: center;
 }
 
 .accordion {
@@ -143,6 +159,9 @@ body {
     background-color: #0b59a7;
     color: white;
     margin: 5px 0;
+}
+.accordion:hover{
+    background-color: #04013d;
 }
 
 .panel {
@@ -160,7 +179,7 @@ p{
 b{
     font-size: 30px;
 }
-#myBtn{
+.mybtn{
     font-size: 15px;
 }
 .info button{

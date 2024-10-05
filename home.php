@@ -45,55 +45,44 @@ if (!isset($_SESSION["email"])) {
     <div class="part">
         <section class="cards">
             <div class="column">
-                <div class="card" id="card"><img src="images\im1.jpg" alt="Card 1">
+                <div class="card" id="card1"><img src="images\im1.jpg" alt="Card 1">
                     <div class="container" id="container">
                         <h4><b>Automated parking System</b></h4>
-                        <p>Experience the future of parking with our *Automated Parking System*, designed for maximum
-                            efficiency and convenience. This advanced system automates the process of parking your car,
-                            reducing the time and effort traditionally required. Simply drive up to the designated
-                            area,<span id="dots">...</span><span id="more"> and our technology takes care of the
-                                rest—finding a suitable space, safely parking your vehicle, and retrieving it when
-                                you're ready to leave. This system not only saves space and time but also improves
-                                security and reduces the risk of damage, providing a seamless parking experience for
-                                drivers in busy urban areas."
+                        <p>Experience the future of parking with our Automated Parking System , designed for maximum
+                            efficiency and convenience. This advanced system automates the process of parking <span id="dots1">...</span><span id="more1"> 
+                            your car, reducing the time and effort traditionally required.Simply drive up to the
+                                 designated area, and our technology takes care of the
+                                rest finding a suitable space, safely parking your vehicle, and retrieving it when
+                                you're ready to leave. 
                             </span></p>
-                        <button onclick="myFunction1()" id="myBtn">Read more</button>
+                        <button onclick="myFunction1()" id="myBtn1" class="mybtn">Read more</button>
                     </div>
                 </div>
             </div>
             <div class="column">
-                <div class="card"><img src="images\im7.jpg" alt="Card 2">
+                <div class="card" id="card2"><img src="images\im7.jpg" alt="Card 2">
                     <div class="container" id="container">
                         <h4><b>Parking solutions</b></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                            nulla et dictum interdum, nisi lorem egestas vitae
-                            scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor.
-                                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-                                augue ut aliquet
-                                Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-                                venenatis imperdiet sed ornare turpis.
-                                Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
-                                fermentum.
-                                Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="myFunction2()" id="myBtn">Read more</button>
+                        <p>Our Comprehensive Parking Solutions cater to the unique needs of every driver. 
+                                Whether you’re looking for short-term parking near a shopping center, long-term parking for your daily commute, 
+                                or secure overnight parking, we have you covered.<span id="dots2">...</span><span id="more2"> With features like real-time availability, 
+                                digital reservations, and secure payment gateways, our services make it easy to find a spot anytime, anywhere. 
+                                Our solutions are crafted to offer easy access, efficient use of parking space, and robust security measures, 
+                                ensuring that your vehicle is well-protected and you have a stress-free experience.</span></p>
+                        <button onclick="myFunction2()" id="myBtn2" class="mybtn">Read more</button>
                     </div>
                 </div>
             </div>
             <div class="column">
-                <div class="card"><img src="images\im8.jpg" alt="Card 3">
-                    <div class="container">
+                <div class="card" id="card3"><img src="images\im8.jpg" alt="Card 3">
+                    <div class="container"id="container">
                         <h4><b>Emergency Services</b></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                            nulla et dictum interdum, nisi lorem egestas vitae
-                            scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor.
-                                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-                                augue ut aliquet
-                                Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-                                venenatis imperdiet sed ornare turpis.
-                                Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
-                                fermentum.
-                                Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="myFunction3()" id="myBtn">Read more</button>
+                        <p>Reliable Emergency Services are just a call away when you use our parking facilities.
+                        We know that unexpected situations can occur, from vehicle breakdowns to needing a jump-start, tire change, or even help finding your car.<span id="dots3">...</span><span id="more3">
+                                  Our 24/7 support team is ready to assist you with prompt and efficient service. Additionally, our parking areas are equipped with
+                                   enhanced security monitoring,providing both assistance and protection in emergency scenarios. Whether you need roadside assistance 
+                                   or quick support in case of an incident, we ensure safety and peace of mind for all our customers</span></p>
+                        <button onclick="myFunction3()" id="myBtn3" class="mybtn">Read more</button>
                     </div>
                 </div>
             </div>
@@ -115,7 +104,7 @@ if (!isset($_SESSION["email"])) {
         <div class="faq-item">
             <button class="accordion">Can all types of vehicles use the system?</button>
             <div class="panel">
-                <p><b>Yes</b><i>, the NexSlot automated parking system is designed to accommodate a variety of vehicle
+                <p><b>Yes</b>, <i>the NexSlot automated parking system is designed to accommodate a variety of vehicle
                         types,
                         including sedans, SUVs, and compact cars. However, certain large vehicles like trucks or RVs may
                         need to check the size restrictions to ensure compatibility with the parking structure.</i></p>
