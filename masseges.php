@@ -38,7 +38,7 @@
     </section>
 
     <section class="feedback">
-        <h1>Feedback</h1>
+        <h1>Contact Us</h1>
         <form action="" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="e.g. Name">

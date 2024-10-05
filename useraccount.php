@@ -36,10 +36,12 @@
                 </ul>
 
                 <form method="POST" action="useraccountINC.php">
+
                 <button class="payment-btn" name="payment">Payment</button>
                 <button class="delete-account-btn" name="delete">Delete Account</button>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <button class="delete-account-btn" name="logout">Logout</button>
+
                 </form>
             </div>
 
@@ -75,7 +77,11 @@
             <div class="package-info">
                 <h2>Activated Package</h2>
                 <div class="package-img">
-                    <img src="images\img1.jpg" alt="Activated Package">
+                    <img src="images\<?php if($_SESSION['package']== "premium"){
+                        echo "premium.png" ;
+                    }else{
+                        echo "basic.png";
+                    } ?>" alt="Profile Picture">
                 </div>
                 <a href="package.php" class="more-info-btn">More Info</a><br><br><hr><br>
 

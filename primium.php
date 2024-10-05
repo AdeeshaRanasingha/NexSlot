@@ -110,13 +110,33 @@
                 <input name="nic" type="text" value="<?php echo $_SESSION['ID']; ?>"><br><br>
                 <label>Licence No : </label><br>
                 <input name="licence" type="text" value="<?php echo $_SESSION['lisence']; ?>"><br><br>
-                <label>Select vehicle : </label><br>
-                <select name="vehicle" >
-                    <option>Select...</option>
-                    <option name="vehicle">1</option>
-                    <option name="vehicle">2</option>
-                    <option name="vehicle">3</option>
-                </select>
+
+                <label for="vehicle"><b>Select Vehicle</b></label><br>
+                <select name="vehicle" id="vehicle" class="input">
+                <option value="">Select a Vehicle</option>
+                <?php
+          
+                require_once 'database.php';
+
+          
+                $sql = "SELECT vehicleID, brand, model, vehicleNo FROM vehicle where email= '{$_SESSION['email']}'";
+                $query_run = mysqli_query($conn, $sql);
+                ?>
+
+                <?php
+            
+                if (mysqli_num_rows($query_run) > 0) {
+                
+                while ($row = mysqli_fetch_assoc($query_run)) {
+                    echo "<option value='" . $row['vehicleID'] . "'>" . $row['vehicleNo'] . "</option>";
+                }
+                } else {
+                echo "<option value=''>No vehicles available</option>";
+                }
+                ?>
+
+        </select>
+
                 <button type="button" id="add-vehicle" onclick="location.href = 'vehicleRegistration.php';" >Add New Vehicle</button><br><br>
                 <label>Select Date : </label><br>
                 <input name="date" type="date"><br><br>

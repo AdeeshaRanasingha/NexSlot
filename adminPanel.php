@@ -27,7 +27,7 @@
         <a href="#"><i class="fas fa-car"></i> Vehicle</a>
       </li>
       <li>
-        <a href="#"><i class="fas fa-calendar-check"></i> Reservation</a>
+        <a href="adminReservation.php"><i class="fas fa-calendar-check"></i> Reservation</a>
       </li>
       <li>
         <a href="csrRegistration.php"><i class="fas fa-briefcase"></i> Employees</a>
@@ -36,7 +36,10 @@
         <a href="#"><i class="fas fa-credit-card"></i> Payment</a>
       </li>
       <li>
-        <a href="adminPackage.php"><i class="fas fa-cogs"></i> package</a>
+        <a href="adminPackage\adminPackage.php"><i class="fas fa-cogs"></i> package</a>
+      </li>
+      <li>
+        <a href="adminMessage.php"><i class="fas fa-cogs"></i> Message</a>
       </li>
     </ul>
   </div>

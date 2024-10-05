@@ -17,10 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $date = $_POST['date'];
     $startTime = $_POST['start_time'];
     $endTime = $_POST['end_time'];
+    $floor = $_POST['floor'];
+    $slot = $_POST['slot'];
 
     // SQL query to insert data into reservations table
-    $sql = "INSERT INTO reservation (username, nic, license_number, vehicle, date, start_time, end_time ,email , package)
-            VALUES ('$username', '$nic', '$licenseNumber', '$vehicle', '$date', '$startTime', '$endTime' ,'{$_SESSION['email']}' , '{$_SESSION['package']}')";
+    $sql = "INSERT INTO reservation (username, nic, license_number, vehicle, date, start_time, end_time ,email , package , floor , slot)
+            VALUES ('$username', '$nic', '$licenseNumber', '$vehicle', '$date', '$startTime', '$endTime' ,'{$_SESSION['email']}' , '{$_SESSION['package']}' , '$floor' , '$slot')";
 
     // Print query for debugging
     echo "Executing Query: " . $sql . "<br>";

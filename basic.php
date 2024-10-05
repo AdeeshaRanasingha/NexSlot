@@ -1,10 +1,20 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["submit"])){
+        include("loginHeader.php");
+    }
+    else{
+        include("header.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NexSlot Reservation</title>
-    <?php include 'header.php'; ?>
+    
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style\basic.css" />
   </head>
@@ -32,11 +42,32 @@
         <input name="license_number" type="text" id="license" class="input" value="<?php echo $_SESSION['lisence']; ?>" required />
       </div>
 
-      <!-- Select vehicle dropdown and button to add new vehicles -->
-      <label for="vehicle"><b>Select Vehicle</b></label>
-      <select name="vehicle" id="vehicle" class="input">
-        <option value="">Select a Vehicle</option>
-      </select>
+<!-- Select vehicle dropdown -->
+        <label for="vehicle"><b>Select Vehicle</b></label>
+        <select name="vehicle" id="vehicle" class="input">
+            <option value="">Select a Vehicle</option>
+            <?php
+          
+          require_once 'database.php';
+
+          
+          $sql = "SELECT vehicleID, brand, model, vehicleNo FROM vehicle where email= '{$_SESSION['email']}'";
+          $query_run = mysqli_query($conn, $sql);
+          ?>
+
+            <?php
+            
+            if (mysqli_num_rows($query_run) > 0) {
+                
+                while ($row = mysqli_fetch_assoc($query_run)) {
+                    echo "<option value='" . $row['vehicleNo'] . "'>" . $row['vehicleNo'] . "</option>";
+                }
+            } else {
+                echo "<option value=''>No vehicles available</option>";
+            }
+            ?>
+
+        </select>
       
       <!-- Button to add a new vehicle -->
       <button type="button" class="button" onclick="location.href = 'vehicleRegistration.php';">Add new vehicles</button>
@@ -54,6 +85,9 @@
       <label for="end_time">Ending Time</label>
       <input name="end_time" type="time" class="input" />
 
+      <input type="hidden" name="floor" id="selectedFloor">
+      <input type="hidden" name="slot" id="selectedSlot">
+
       <!-- Reset and submit buttons for the form -->
       <input type="reset" class="button" />
       <input type="submit" class="button" />
@@ -61,6 +95,8 @@
       <!-- View Reservations button -->
       <a href="viewReservationBasic.php" class="button" >View Reservations</a>
     </form>
+
+    <script src="js\basic.js"></script>
   </body>
 
   <br><br>

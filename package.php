@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION["submit"])) {
+if (!isset($_SESSION["email"])) {
     include("loginHeader.php");
 } else {
     include("header.php");
@@ -82,10 +82,15 @@ require_once 'database.php';
 session_start();
 
 if (isset($_POST["free"])) {
-    $sql = "UPDATE users SET package = 'basic' WHERE email = '{$_SESSION['email']}'";
-    $result = mysqli_query($conn, $sql);
-
     
+
+    if (!isset($_SESSION["email"])){
+        header('location: login.php?error=loginfirst');
+    }
+    else{
+        $sql = "UPDATE users SET package = 'basic' WHERE email = '{$_SESSION['email']}'";
+        $result = mysqli_query($conn, $sql);
+    }
 
 }
 

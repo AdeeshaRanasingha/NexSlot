@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION["submit"])) {
+if (!isset($_SESSION["email"])) {
     include("loginHeader.php");
 } else {
     include("header.php");
