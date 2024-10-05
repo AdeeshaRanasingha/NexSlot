@@ -49,6 +49,7 @@
             <label for="feedback">Add your feedback</label>
             <textarea id="feedback" name="feedback" placeholder="Example Text"></textarea>
             <button type="submit" value="submit" name="submit">Submit</button>
+            
         </form>
     </section>
 </body>
@@ -72,7 +73,7 @@ if(isset($_POST["submit"])){
   $result = mysqli_query($conn, $sql);
 
   if($result){
-    echo "Feedback submitted successfully!";
+    echo "<script>alert('Submission successful!'); </script>";
     // Optionally redirect after successful submission
     // header('location: success_page.php');
   } else {

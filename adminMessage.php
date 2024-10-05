@@ -29,6 +29,7 @@
         $sql = "UPDATE feedback SET message = '$message', reply = '$reply' WHERE messageID = '$messageid'";
         
         if (mysqli_query($conn, $sql)) {
+            echo "<script>alert('Reply successful!'); </script>";
             header('Location: adminMessage.php'); 
         } 
         else {
@@ -39,7 +40,7 @@
     // Delete admin data
 if (isset($_GET['delete_id'])) {
     $id = $_GET['delete_id'];
-    $sql = "DELETE FROM feedback WHERE meessageID='$messageid'";
+    $sql = "DELETE FROM feedback WHERE messageID='$id'";
     $result = mysqli_query($conn, $sql);
 
     if ($query_run) {
