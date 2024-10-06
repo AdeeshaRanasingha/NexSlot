@@ -21,18 +21,18 @@
         <div class="testimonial-container">
             <div class="testimonial">
                 <div class="avatar"><img src="images/photo1.jpg" width="100px" height="100px"> </div>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus."</p>
-                <p class="user-name">User Name</p>
+                <p>"The service was exceptional, and the support team was very responsive. Highly recommend!"</p>
+                <p class="user-name">Awishka Dissanayaka</p>
             </div>
             <div class="testimonial">
                 <div class="avatar"><img src="images/photo2.jpg" width="100px" height="100px"> </div>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus."</p>
-                <p class="user-name">User Name</p>
+                <p>"A great experience overall! User-friendly and extremely reliable. I'm a happy client."</p>
+                <p class="user-name">Ema Kulathunga</p>
             </div>
             <div class="testimonial">
                 <div class="avatar"><img src="images/photo3.jpg" width="100px" height="100px"> </div>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus."</p>
-                <p class="user-name">User Name</p>
+                <p>"Very pleased with the service. The interface is clean, and the process is hassle-free."</p>
+                <p class="user-name">Kelum Weerasooriya</p>
             </div>
         </div>
     </section>
