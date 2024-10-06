@@ -65,7 +65,7 @@ if (isset($_GET['delete_id'])) {
 
 <!-- Form to Add or Edit Admin -->
 <div class="container" id="form-container">
-    <h2 style="text-align:center;">Edit Message</h2>
+    <h2>Edit Message</h2>
     <form method="post" action="">
         <div class="inputs">
             <label for="admin_name">message</label><br>
@@ -84,7 +84,7 @@ if (isset($_GET['delete_id'])) {
 
     <!-- Admin Table -->
     <div class="container" id="table-container">
-    <h2 style="text-align:center;">List of Messages</h2>
+    <h2>List of Messages</h2>
     <br>
     <!-- Fetch and Display List of Admins -->
     <table class="table">
