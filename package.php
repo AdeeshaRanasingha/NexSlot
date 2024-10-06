@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'database.php';
 if (!isset($_SESSION["email"])) {
     include("loginHeader.php");
 } else {
@@ -36,12 +37,26 @@ if (!isset($_SESSION["email"])) {
                     <form action="" method="POST">
                         <button class="cta-button" name="free" onclick="confirmation()">Let's Get Started</button>
                     </form>
-                    <ul class="features-list">
-                        <li>Free for one user</li>
-                        <li>Parking lot</li>
-                        <li>24/7 customer service</li>
-                        <li>Basic support</li>
-                    </ul>
+
+                    <?php
+        $query = "SELECT * FROM package1";
+        $query_run = mysqli_query($conn, $query);
+
+        if (mysqli_num_rows($query_run) > 0) {
+            while ($row = mysqli_fetch_assoc($query_run)) {
+                ?>
+                <ul class="features-list">
+                    <li><?php echo $row['Features']; ?></li>
+                    
+                    
+            </ul><br>
+                <?php
+            }
+        } else {
+            echo "<ul><li>No record found</li></ul>";
+        }
+        ?>
+
                 </div>
 
                 <!-- Premium Plan Card -->
@@ -56,14 +71,26 @@ if (!isset($_SESSION["email"])) {
                         <button class="cta-button" name="premium"
                             onclick='window.location.href = "payment.php";'>Let's Get Started</button>
                     </form>
-                    <ul class="features-list">
-                        <li>Max 5 users</li>
-                        <li>Parking lot</li>
-                        <li>24/7 customer service</li>
-                        <li>Emergency service 24/7</li>
-                        <li>Advance security care</li>
-                        <li>Loyalty rewards</li>
-                    </ul>
+                    <?php
+        $query = "SELECT * FROM package2";
+        $query_run = mysqli_query($conn, $query);
+
+        if (mysqli_num_rows($query_run) > 0) {
+            while ($row = mysqli_fetch_assoc($query_run)) {
+                ?>
+                <ul class="features-list">
+                    <li><?php echo $row['Features']; ?></li>
+                    
+                    
+            </ul><br>
+                <?php
+            }
+        } else {
+            echo "<ul><li>No record found</li></ul>";
+        }
+        ?>
+
+                </div>
                 </div>
             </div>
         </section>
@@ -77,9 +104,9 @@ include("footer.php");
 ?>
 <?php
 
-require_once 'database.php';
 
-session_start();
+
+
 
 if (isset($_POST["free"])) {
     

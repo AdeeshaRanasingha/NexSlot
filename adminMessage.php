@@ -95,7 +95,7 @@ if (isset($_GET['delete_id'])) {
                 <th>NAME</th>
                 <th>MESSAGE</th>
                 <th>REPLY</th>
-                
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>

@@ -161,7 +161,3 @@ if (isset($_GET['delete_id'])) {
 <?php include 'footer.php'; ?>
 
 
-
-
-
-
