@@ -22,7 +22,7 @@
             <div class="testimonial">
                 <div class="avatar"><img src="images/photo1.jpg" width="100px" height="100px"> </div>
                 <p>"The service was exceptional, and the support team was very responsive. Highly recommend!"</p>
-                <p class="Awishka Dissanayaka">User Name</p>
+                <p class="user-name">Awishka Dissanayaka</p>
             </div>
             <div class="testimonial">
                 <div class="avatar"><img src="images/photo2.jpg" width="100px" height="100px"> </div>
