@@ -24,7 +24,7 @@
         <a href="adminUsers.php"><i class="fas fa-users"></i> Users</a>
       </li>
       <li>
-        <a href="#"><i class="fas fa-car"></i> Vehicle</a>
+        <a href="adminVehicle.php"><i class="fas fa-car"></i> Vehicle</a>
       </li>
       <li>
         <a href="adminReservation.php"><i class="fas fa-calendar-check"></i> Reservation</a>
@@ -33,10 +33,7 @@
         <a href="csrRegistration.php"><i class="fas fa-briefcase"></i> Employees</a>
       </li>
       <li>
-        <a href="#"><i class="fas fa-credit-card"></i> Payment</a>
-      </li>
-      <li>
-        <a href="adminPackage\adminPackage.php"><i class="fas fa-cogs"></i> package</a>
+        <a href="adminPackage.php"><i class="fas fa-cogs"></i> package</a>
       </li>
       <li>
         <a href="adminMessage.php"><i class="fas fa-cogs"></i> Message</a>
@@ -61,31 +58,27 @@
   <div class="dashboard-container">
     <!-- Existing Dashboard Boxes -->
     <div class="dashboard-box">
-      <i class="fas fa-users"></i>
-      <p>Users</p>
+      <i class="fas fa-users"></i><a href="adminUsers.php"><p>Users</p></a>
+      
     </div>
     <div class="dashboard-box">
-      <i class="fas fa-car"></i>
-      <p>Vehicles</p>
+      <i class="fas fa-car"></i><a href="adminVehicle.php"><p>Vehicles</p></a>
+      
     </div>
     <div class="dashboard-box">
-      <i class="fas fa-calendar-check"></i>
-      <p>Reservations</p>
+      <i class="fas fa-calendar-check"></i><a href="adminReservation.php"><p>Reservations</p></a>
+      
     </div>
     <div class="dashboard-box">
-      <a href="csrRegistration.php"><i class="fas fa-briefcase"></i></a>
-      <p>Employees</p>
+      <a href="csrRegistration.php"><i class="fas fa-briefcase"></i></a><a href="csrRegistration.php"><p>Employees</p></a>
+      
     </div>
     <div class="dashboard-box">
-      <i class="fas fa-credit-card"></i>
-      <p>Payments</p>
+      <i class="fas fa-credit-card"></i><a href="adminPackage.php"><p>package</p></a>
+      
     </div>
 
-    <!-- Add Box Button -->
-    <div class="dashboard-box add-box" id="addBoxButton">
-      <i class="fas fa-plus-circle"></i>
-      <p>Add Shourtcut</p>
-    </div>
+    
   </div>
   </div>
 </body>

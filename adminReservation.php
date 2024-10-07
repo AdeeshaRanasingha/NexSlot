@@ -103,7 +103,7 @@ if (isset($_GET['delete_id'])) {
 
     <!-- Admin Table -->
     <div class="container" id="table-container">
-    <h2>List of Users</h2>
+    <h2>List of Reservations</h2>
     <br>
     <!-- Fetch and Display List of Admins -->
     <table class="table">
