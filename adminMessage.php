@@ -63,7 +63,7 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body>
 
-<!-- Form to Add or Edit Admin -->
+<!-- reply messages -->
 <div class="container" id="form-container">
     <h2>Edit Message</h2>
     <form method="post" action="">
@@ -82,11 +82,11 @@ if (isset($_GET['delete_id'])) {
 
 
 
-    <!-- Admin Table -->
+    <!-- messages Table -->
     <div class="container" id="table-container">
     <h2>List of Messages</h2>
     <br>
-    <!-- Fetch and Display List of Admins -->
+    <!-- Fetch and Display List of messages -->
     <table class="table">
         <thead>
             <tr>
@@ -102,7 +102,8 @@ if (isset($_GET['delete_id'])) {
         <?php
         $query = "SELECT * FROM feedback";
         $query_run = mysqli_query($conn, $query);
-
+        
+        //displaying details
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>
@@ -114,7 +115,7 @@ if (isset($_GET['delete_id'])) {
                     <td><?php echo $row['reply']; ?></td>
                     <td>
                         <a class='button' id='btn1' href='adminMessage.php?edit_id=<?php echo $row['messageID']; ?>'>Reply</a>
-                        <a class='button' id='btn2' href='adminMessage.php?delete_id=<?php echo $row['messageID']; ?>' onclick="return confirm('Are you sure you want to delete this admin?');">Delete</a>
+                        <a class='button' id='btn2' href='adminMessage.php?delete_id=<?php echo $row['messageID']; ?>' onclick="return confirm('Are you sure you want to delete this message');">Delete</a>
                     </td>
                 </tr>
                 <?php

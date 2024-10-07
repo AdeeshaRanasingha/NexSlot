@@ -1,12 +1,11 @@
 <?php
     
     session_start();
-    if(!isset($_SESSION["submit"])){
-        include("loginHeader.php");
-    }
-    else{
-        include("header.php");
-    }
+    
+        include("adminSidebar.php");
+    
+        
+    
 
     require_once 'database.php';
     
@@ -41,14 +40,14 @@
         $sql = "UPDATE vehicle SET type = '$type', brand = '$brand' , model = '$model' , vehicleNo = '$vehicleNo' WHERE vehicleID = '$vehicleid'";
         
         if (mysqli_query($conn, $sql)) {
-            header('Location: editVehicle.php'); 
+            header('Location: adminVehicle.php'); 
         } 
         else {
-            header('Location: editVehicle.php?erroesomething-went-wrong'); 
+            header('Location: adminVehicle.php?erroesomething-went-wrong'); 
         }
     }
 
-    // Delete admin data
+    // Delete vehicle data
 if (isset($_GET['delete_id'])) {
     $vehicleid = $_GET['delete_id'];
     $sql = "DELETE FROM vehicle WHERE vehicleID='$vehicleid'";
@@ -56,10 +55,10 @@ if (isset($_GET['delete_id'])) {
 
     if ($query_run) {
         $_SESSION['success'] = "Admin account deleted";
-        header('Location: editVehicle.php');
+        header('Location: adminVehicle.php');
     } else {
         $_SESSION['status'] = "Cannot delete the admin account";
-        header('Location: editVehicle.php');
+        header('Location: adminVehicle.php');
 }
 }
 ?>
@@ -74,9 +73,9 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body>
 
-<!-- Form to Add or Edit Admin -->
+<!-- Form to Add or Edit vehicles -->
 <div class="container" id="form-container">
-    <h2>Edit Admin</h2>
+    <h2>Edit vehicle</h2>
     <form method="post" action="">
         <div class="inputs">
             <label for="admin_name">type</label><br>
@@ -99,11 +98,11 @@ if (isset($_GET['delete_id'])) {
 
 
 
-    <!-- Admin Table -->
+    <!-- vehicle Table -->
     <div class="container" id="table-container">
-    <h2>List of Admins</h2>
+    <h2>List of vehicles</h2>
     <br>
-    <!-- Fetch and Display List of Admins -->
+    <!-- Fetch and Display List of vehicles -->
     <table class="table">
         <thead>
             <tr>
@@ -120,6 +119,8 @@ if (isset($_GET['delete_id'])) {
         $query = "SELECT * FROM vehicle";
         $query_run = mysqli_query($conn, $query);
 
+
+        //display details
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>
@@ -131,8 +132,8 @@ if (isset($_GET['delete_id'])) {
                     <td><?php echo $row['model']; ?></td>
                     <td><?php echo $row['vehicleNo']; ?></td>
                     <td>
-                        <a class='button' id='btn1' href='editVehicle.php?edit_id=<?php echo $row['vehicleID']; ?>'>Edit</a>
-                        <a class='button' id='btn2' href='editVehicle.php?delete_id=<?php echo $row['vehicleID']; ?>' onclick="return confirm('Are you sure you want to delete this admin?');">Delete</a>
+                        <a class='button' id='btn1' href='adminVehicle.php?edit_id=<?php echo $row['vehicleID']; ?>'>Edit</a>
+                        <a class='button' id='btn2' href='adminVehicle.php?delete_id=<?php echo $row['vehicleID']; ?>' onclick="return confirm('Are you sure you want to delete?');">Delete</a>
                     </td>
                 </tr>
                 <?php

@@ -65,16 +65,18 @@ if(isset($_POST['logout'])){
 
 }
 
+//delete the account
 if(isset($_POST['delete'])){
 
     session_start();
     $sql = "DELETE FROM users WHERE email='{$_SESSION['email']}'";
     $result = mysqli_query($conn, $sql);
-    header("Location: login.php");
+    header("Location: login.php");//redirecting to login form
 
 }
 
 if(isset($_POST['payment'])){
+    //directing to payment form
 
     header("Location: payment.php");
 

@@ -1,5 +1,5 @@
 <?php
-    
+    //verifying whether the user has entered credentials or not
     session_start();
     if(!isset($_SESSION["submit"])){
         include("loginHeader.php");
@@ -87,6 +87,7 @@
 
                 <h2>vehicles</h2>
                 <?php
+                //displaying vehicles for each user
                     $sql = "SELECT * FROM vehicle WHERE email= '{$_SESSION['email']}' ";
 
                     $result = mysqli_query($conn,$sql);

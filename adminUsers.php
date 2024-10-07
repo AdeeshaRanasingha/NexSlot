@@ -41,7 +41,7 @@
         }
     }
 
-    // Delete admin data
+    // Delete user data
 if (isset($_GET['delete_id'])) {
     $id = $_GET['delete_id'];
     $sql = "DELETE FROM users WHERE userid='$id'";
@@ -67,7 +67,7 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body>
 
-<!-- Form to Add or Edit Admin -->
+<!-- Form to Add or Edit users -->
 <div class="container" id="form-container">
     <h2>Edit Users</h2>
     <form method="post" action="">
@@ -85,7 +85,7 @@ if (isset($_GET['delete_id'])) {
             <input type="text" name="package" id="username" value="<?php echo isset($package) ? $package : ''; ?>" required><br><br>
             
 
-                <button type="submit" name="update" class="button" id="btn">Update Admin</button>
+                <button type="submit" name="update" class="button" id="btn">Update user</button>
             
         </div>
     </form>
@@ -115,7 +115,8 @@ if (isset($_GET['delete_id'])) {
         <?php
         $query = "SELECT * FROM users";
         $query_run = mysqli_query($conn, $query);
-
+        
+        //displayong details
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>

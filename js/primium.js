@@ -23,3 +23,14 @@ function bookSlot(event) {
 document.querySelectorAll('.floor-slots button').forEach(button => {
     button.addEventListener('click', bookSlot);
 });
+
+
+function selectSlot(floor, slot){
+    document.getElementById('selectedFloor').value = floor;
+    document.getElementById('selectedSlot').value = slot;
+// Variable to keep track of the booked slot
+let bookedSlot = null;
+
+    alert("selected");
+}
+

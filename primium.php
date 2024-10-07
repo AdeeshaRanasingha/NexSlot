@@ -1,5 +1,6 @@
 
 <?php
+//verifying whether the user has entered credentials or not
     session_start();
     if(!isset($_SESSION["submit"])){
         include("loginHeader.php");
@@ -89,10 +90,10 @@
                                 <div class="floor-row">
                                     <td><div class="floor-number">5</div></td>
                                     <td><div class="floor-slots">
-                                        <button onclick="selectSlot(5, 'A')">A</button><button onclick="selectSlot(4, 'B')">B</button><button onclick="selectSlot(4, 'C')">C</button>
-                                        <button onclick="selectSlot(5, 'D')">D</button><button onclick="selectSlot(4, 'E')">E</button><button onclick="selectSlot(4, 'C')">F</button>
-                                        <button onclick="selectSlot(5, 'G')">G</button><button onclick="selectSlot(4, 'H')">H</button><button onclick="selectSlot(4, 'C')">I</button>
-                                        <button onclick="selectSlot(5, 'J')">J</button><button onclick="selectSlot(4, 'K')">K</button>
+                                        <button onclick="selectSlot(5, 'A')">A</button><button onclick="selectSlot(5, 'B')">B</button><button onclick="selectSlot(5, 'C')">C</button>
+                                        <button onclick="selectSlot(5, 'D')">D</button><button onclick="selectSlot(5, 'E')">E</button><button onclick="selectSlot(5, 'C')">F</button>
+                                        <button onclick="selectSlot(5, 'G')">G</button><button onclick="selectSlot(5, 'H')">H</button><button onclick="selectSlot(5, 'C')">I</button>
+                                        <button onclick="selectSlot(5, 'J')">J</button><button onclick="selectSlot(5, 'K')">K</button>
                                         </div></td>
                                 </div>
                             </tr>
@@ -128,7 +129,7 @@
                 if (mysqli_num_rows($query_run) > 0) {
                 
                 while ($row = mysqli_fetch_assoc($query_run)) {
-                    echo "<option value='" . $row['vehicleID'] . "'>" . $row['vehicleNo'] . "</option>";
+                    echo "<option value='" . $row['vehicleNo'] . "'>" . $row['vehicleNo'] . "</option>";
                 }
                 } else {
                 echo "<option value=''>No vehicles available</option>";

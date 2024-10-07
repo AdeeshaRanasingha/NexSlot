@@ -1,4 +1,5 @@
 <?php
+//verifying whether the user has entered credentials or not
     require_once 'database.php';
     session_start();
     if(!isset($_SESSION["submit"])){
@@ -87,10 +88,12 @@
     include("footer.php");
 ?>
 <?php
+//updating the package of user to premium
     if(isset($_POST["premium"]) or isset($_POST["pay"])){
         
             $sql = "UPDATE users SET package = 'premium' WHERE email = '{$_SESSION['email']}'";
             $result = mysqli_query($conn , $sql);
+            $_SESSION['package']="premium";
             
         
     }

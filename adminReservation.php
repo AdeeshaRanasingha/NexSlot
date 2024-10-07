@@ -127,6 +127,7 @@ if (isset($_GET['delete_id'])) {
         $query = "SELECT * FROM reservation";
         $query_run = mysqli_query($conn, $query);
 
+        //displaying details
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>

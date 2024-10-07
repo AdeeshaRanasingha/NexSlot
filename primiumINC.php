@@ -5,7 +5,7 @@ session_start();
         $name = $_POST["name"];
         $nic = $_POST["nic"];
         $licence = $_POST["licence"];
-       // $vehicle = $_POST["vehicle"];
+       $vehicle = $_POST["vehicle"];
         $date = $_POST["date"];
         $floor = $_POST["floor"];
         $slot = $_POST["slot"];
@@ -13,11 +13,11 @@ session_start();
     
         require_once 'database.php';
 
-            
-            $sql = "INSERT INTO reservation (username,email,nic,license_number,floor,slot,package,date) VALUES ('$name','$email','$nic','$licence','$floor','$slot','$package','$date') ";
+            //inserting data into the tables
+            $sql = "INSERT INTO reservation (username,email,nic,license_number,floor,slot,package,date,vehicle) VALUES ('$name','$email','$nic','$licence','$floor','$slot','$package','$date','$vehicle') ";
             $result = mysqli_query($conn, $sql);
             echo "successful";
-            header('location: primium.php?error=successful');//redirecting to the login page
+            header('location: viewReservationPremium.php?error=successful');//redirecting to the login page
        
     }
     

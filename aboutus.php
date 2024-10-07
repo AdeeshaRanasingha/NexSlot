@@ -1,4 +1,6 @@
+
 <?php
+//verifying whether the user has entered credentials or not
     session_start();
     if(!isset($_SESSION["submit"])){
         include("loginHeader.php");

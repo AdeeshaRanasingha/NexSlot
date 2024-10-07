@@ -40,13 +40,13 @@
             <input type="text" id="vehicle" name="vehicle" placeholder="Vehicle no."  required><br><br>
 
             
-            <input type="text" id="ID" name="ID" placeholder="ID no."  required ><br><br>
+            <input type="text" id="ID" name="ID" placeholder="ID no."  maxlength="13" required ><br><br>
 
             
-            <input type="text" id="licence" name="licence" placeholder="Licence no." required><br><br>
+            <input type="text" id="licence" name="licence" placeholder="Licence no." maxlength="10" required><br><br>
 
             
-            <input type="number" id="contact" name="contact" placeholder="Contact no." required><br><br>
+            <input type="number" id="contact" name="contact" placeholder="Contact no." maxlength="10" required><br><br>
 
             <button type="submit" class="signup_btn" name="submit">Sign Up</button><br><br>
 

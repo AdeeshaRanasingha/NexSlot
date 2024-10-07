@@ -1,4 +1,5 @@
 <?php
+//verifying whether the user has entered credentials or not
 session_start();
 if (!isset($_SESSION["email"])) {
     include("loginHeader.php");
@@ -21,7 +22,7 @@ if (!isset($_SESSION["email"])) {
     <!-- Image Slider/Carousel -->
     <section class="slider">
         <div class="slide">
-            <video autoplay muted loop src="images\WhatsApp Video 2024-09-26 at 20.41.34_dd240a0e.mp4">
+            <video autoplay muted loop src="images\Welcome to NexSlot.mp4">
         </div>
         <div class="slide">
             <img src="images\im2.jpg" alt="Slide 2">

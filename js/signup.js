@@ -9,6 +9,7 @@ function confirmPassword()//checking the same value entered in both password and
     }
 }
 
+//removing the data in email section
 function emailExist(){
     alert("email already exist");
     document.getElementById("email").value="";

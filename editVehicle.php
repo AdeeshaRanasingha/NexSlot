@@ -1,5 +1,5 @@
 <?php
-    
+    //verifying whether the user has entered credentials or not
     session_start();
     if(!isset($_SESSION["submit"])){
         include("loginHeader.php");
@@ -48,7 +48,7 @@
         }
     }
 
-    // Delete admin data
+    // Delete vehiclke data
 if (isset($_GET['delete_id'])) {
     $vehicleid = $_GET['delete_id'];
     $sql = "DELETE FROM vehicle WHERE vehicleID='$vehicleid'";
@@ -74,9 +74,9 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body>
 
-<!-- Form to Add or Edit Admin -->
+<!-- Form to Add or Edit vehicles -->
 <div class="container" id="form-container">
-    <h2>Edit Admin</h2>
+    <h2>Edit vehicles</h2>
     <form method="post" action="">
         <div class="inputs">
             <label for="admin_name">type</label><br>
@@ -101,7 +101,7 @@ if (isset($_GET['delete_id'])) {
 
     <!-- Admin Table -->
     <div class="container" id="table-container">
-    <h2>List of Admins</h2>
+    <h2>List of vehicles</h2>
     <br>
     <!-- Fetch and Display List of Admins -->
     <table class="table">
@@ -120,6 +120,7 @@ if (isset($_GET['delete_id'])) {
         $query = "SELECT * FROM VEHICLE WHERE email = '{$_SESSION['email']}'";
         $query_run = mysqli_query($conn, $query);
 
+        //display data
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>

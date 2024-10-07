@@ -18,7 +18,7 @@ body {
     gap: 30px;
 }
 
-/* Account container */
+/* Account */
 .account-container {
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,7 @@ body {
     padding: 20px;
 }
 
-/* Sidebar styling */
+/* Sidebar */
 .sidebar {
     width: 250px;
     padding: 20px;
@@ -82,7 +82,7 @@ body {
     color: #fff;
 }
 
-/* Form styling */
+/* Form */
 .user-details-form {
     flex-grow: 1;
     padding: 20px;
@@ -128,7 +128,7 @@ body {
     background-color: #00509e;
 }
 
-/* Package info section */
+/* Package info */
 .package-info {
     width: 300px;
     padding: 20px;

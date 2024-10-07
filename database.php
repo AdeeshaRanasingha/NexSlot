@@ -5,6 +5,7 @@ $dbUserNmae = "root";
 $dbPassword = "";
 $dbName = "nexslot";
 
+//connection
 $conn = new mysqli($serverName , $dbUserNmae , $dbPassword , $dbName);
 
 if(!$conn){

@@ -12,10 +12,12 @@ if(isset($_POST["submit"])){
 
     require_once 'database.php';
     
+    //checking wheather the email already exist
     $sql = "SELECT * FROM users WHERE email = '{$email}' LIMIT 1"; //sql for validating weather e mail already exist or not
 
     $resultset = mysqli_query($conn, $sql);
 
+    //if exist re direct to signup page
     if(mysqli_num_rows($resultset) ==1){
         header('location:signup.php?error=email-already-exist');
 

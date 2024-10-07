@@ -1,4 +1,5 @@
 <?php
+//verifying whether the user has entered credentials or not
 session_start();
 if (!isset($_SESSION["submit"])) {
     include("loginHeader.php");
@@ -52,16 +53,17 @@ if (!isset($_SESSION["submit"])) {
                         </select>
                     </div>
 
-                    <div class="form-group">
+                    
                         <label>Vehicle Model</label>
                         <input type="text" placeholder="Model" name="model">
-                    </div>
+                    
 
-                    <div class="form-group">
+                    
                         <label for="vehicleNumber">Vehicle Number</label>
                         <input type="text" id="vehicleNumber" placeholder="Vehicle number" name="vehicleNumber"
                             required>
-                    </div>
+                    
+                    <input type="date" name="date" id="date">
 
                     <button type="submit" name="submit">Register</button>
 
@@ -72,6 +74,7 @@ if (!isset($_SESSION["submit"])) {
         </section>
     </div>
 
+    <script src="js\vehicle.js"></script>
 </body>
 
 </html>
@@ -86,18 +89,22 @@ if (isset($_POST["submit"])) {
     $brand = $_POST["brand"];
     $model = $_POST["model"];
     $vehicleNumber = $_POST["vehicleNumber"];
+    $date=$_POST["date"];
 
     require_once 'database.php';
 
-    $sql = "INSERT INTO vehicle (email, type, brand, model, vehicleNo) VALUES ('{$_SESSION['email']}', '{$type}', '{$brand}', '{$model}', '{$vehicleNumber}')";
+    //insert to vehicle table
+    $sql = "INSERT INTO vehicle (email, type, brand, model, vehicleNo , date) VALUES ('{$_SESSION['email']}', '{$type}', '{$brand}', '{$model}', '{$vehicleNumber}' , '{$date}')";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
         echo "<script>
                 showSuccessMessage();
             </script>";
+            header('location:editVehicle.php');
     } else {
         echo "<script>alert('Error while registering vehicle.');</script>";
     }
 }
+
 ?>

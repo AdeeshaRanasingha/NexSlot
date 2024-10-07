@@ -232,7 +232,7 @@ if (isset($_POST['add2'])) {
 <br><br>
 <!-- Form to Add or Edit package 2 -->
 <div class="container" id="form-container">
-    <h2>Edit Package 1</h2>
+    <h2>Edit Package 2</h2>
     <form method="post" action="">
         <div class="inputs">
 
@@ -257,7 +257,7 @@ if (isset($_POST['add2'])) {
 
     <!-- Package 2 -->
     <div class="container" id="table-container">
-    <h2>Package 1</h2>
+    <h2>Package 2</h2>
     <br>
     <!-- Fetch and Display List of package 2 -->
     <table class="table">

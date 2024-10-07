@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Execute the query and check if successful
     if ($conn->query($sql) === TRUE) {
+        header('location: basic.php');
         echo "New reservation created successfully";
     } else {
         // Display error message if insertion fails

@@ -1,4 +1,5 @@
 <?php
+//verifying whether the user has entered credentials or not
     require_once 'database.php';
     
     session_start();
@@ -13,15 +14,15 @@
     // Delete admin data
 if (isset($_GET['delete_id'])) {
     $id = $_GET['delete_id'];
-    $sql = "DELETE FROM users WHERE userid='$id'";
+    $sql = "DELETE FROM reservation WHERE reservationID='$id'";
     $result = mysqli_query($conn, $sql);
 
     if ($query_run) {
-        $_SESSION['success'] = "Admin account deleted";
-        header('Location: adminUsers.php');
+       
+        header('Location: viewReservationBasic.php');
     } else {
-        $_SESSION['status'] = "Cannot delete the admin account";
-        header('Location: adminUsers.php');
+       
+        header('Location: viewReservationBasic.php?error-not-working');
 }
 }
 ?>
@@ -36,11 +37,11 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body>
 
-    <!-- Admin Table -->
+    <!-- reservation Table -->
     <div class="container" id="table-container">
-    <h2>List of Users</h2>
+    <h2>List of reservations</h2>
     <br>
-    <!-- Fetch and Display List of Admins -->
+    <!-- Fetch and Display List of reservations -->
     <table class="table">
         <thead>
             <tr>
@@ -58,6 +59,7 @@ if (isset($_GET['delete_id'])) {
         </thead> 
         <tbody>
         <?php
+        //displaying details of reservations of specific user
         $query = "SELECT * FROM reservation WHERE email= '{$_SESSION['email']}'";
         $query_run = mysqli_query($conn, $query);
 
@@ -77,7 +79,7 @@ if (isset($_GET['delete_id'])) {
                     <td><?php echo $row['end_time']; ?></td>
                     <td>
                         
-                        <a class='button' id='btn2' href='adminUsers.php?delete_id=<?php echo $row['userId']; ?>' onclick="return confirm('Are you sure you want to delete this admin?');">Delete</a>
+                        <a class='button' id='btn2' href='viewReservationBasic.php?delete_id=<?php echo $row['reservationID']; ?>' onclick="return confirm('Are you sure you want to delete?');">Delete</a>
                     </td>
                 </tr>
                 <?php

@@ -1,4 +1,5 @@
 <?php
+//verifying whether the user has entered credentials or not
 session_start();
 require_once 'database.php';
 if (!isset($_SESSION["email"])) {
@@ -16,6 +17,7 @@ if (!isset($_SESSION["email"])) {
     <title>Pricing</title>
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="style\package.css">
+    <script src = "./js/package.js"></script>
 </head>
 
 <body>
@@ -42,6 +44,7 @@ if (!isset($_SESSION["email"])) {
         $query = "SELECT * FROM package1";
         $query_run = mysqli_query($conn, $query);
 
+        //displaying the details
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>
@@ -75,6 +78,7 @@ if (!isset($_SESSION["email"])) {
         $query = "SELECT * FROM package2";
         $query_run = mysqli_query($conn, $query);
 
+        //displaying the details of package 2
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>
@@ -107,7 +111,7 @@ include("footer.php");
 
 
 
-
+//updating the packege selected
 if (isset($_POST["free"])) {
     
 

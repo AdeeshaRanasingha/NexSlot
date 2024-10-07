@@ -1,5 +1,5 @@
 <?php
-    
+    //verifying whether the user has entered credentials or not
     session_start();
     if(!isset($_SESSION["submit"])){
         include("loginHeader.php");
@@ -49,7 +49,7 @@
         }
     }
 
-    // Delete admin data
+    // Delete reservation data
 if (isset($_GET['delete_id'])) {
     $reservationid = $_GET['delete_id'];
     $sql = "DELETE FROM reservation WHERE reservationID='$reservationid'";
@@ -75,7 +75,7 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body>
 
-<!-- Form to Add or Edit Admin -->
+<!-- Form to Add or Edit reservation -->
 <div class="container" id="form-container">
     <h2>Edit Reservations</h2>
     <form method="post" action="">
@@ -101,11 +101,11 @@ if (isset($_GET['delete_id'])) {
 
 
 
-    <!-- Admin Table -->
+    <!-- reservation Table -->
     <div class="container" id="table-container">
-    <h2>List of Users</h2>
+    <h2>List of reservation</h2>
     <br>
-    <!-- Fetch and Display List of Admins -->
+    <!-- Fetch and Display List of reservation -->
     <table class="table">
         <thead>
             <tr>
@@ -126,6 +126,7 @@ if (isset($_GET['delete_id'])) {
         $query = "SELECT * FROM reservation WHERE email= '{$_SESSION['email']}'";
         $query_run = mysqli_query($conn, $query);
 
+        //displaying details of reservations of specific user
         if (mysqli_num_rows($query_run) > 0) {
             while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>
@@ -142,7 +143,7 @@ if (isset($_GET['delete_id'])) {
                     <td><?php echo $row['end_time']; ?></td>
                     <td>
                     <a class='button' id='btn1' href='viewReservationPremium.php?edit_id=<?php echo $row['reservationID']; ?>'>Edit</a>
-                        <a class='button' id='btn2' href='viewReservationPremium.php?delete_id=<?php echo $row['reservationID']; ?>' onclick="return confirm('Are you sure you want to delete this admin?');">Delete</a>
+                        <a class='button' id='btn2' href='viewReservationPremium.php?delete_id=<?php echo $row['reservationID']; ?>' onclick="return confirm('Are you sure you want to delete?');">Delete</a>
                     </td>
                 </tr>
                 <?php

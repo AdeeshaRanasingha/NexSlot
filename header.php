@@ -16,6 +16,7 @@
                 <li><a href="home.php">Home</a></li>
                 <li><a href="aboutus.php">About</a></li>
                 <li><a href="<?php
+                //checking the user has selected premium or basic package
                         if($_SESSION['package'] == 'premium'){
                             echo 'primium.php';
                         }
