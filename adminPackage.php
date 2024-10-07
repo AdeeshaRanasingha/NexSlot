@@ -43,10 +43,10 @@ if (isset($_GET['delete_id1'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($query_run) {
-        $_SESSION['success'] = "Admin account deleted";
+        $_SESSION['success'] = "Package  deleted";
         header('Location: adminPackage.php');
     } else {
-        $_SESSION['status'] = "Cannot delete the admin account";
+        $_SESSION['status'] = "Cannot delete the package";
         header('Location: adminPackage.php');
 }
 }
@@ -63,10 +63,10 @@ if (isset($_POST['add1'])) {
    
 
     if ($query_run) {
-        $_SESSION['success'] = "Admin account added";
+        $_SESSION['success'] = "package added";
         header('Location: adminPackage.php');
     } else {
-        $_SESSION['status'] = "Cannot add the admin account";
+        $_SESSION['status'] = "Cannot add the package";
         header('Location: adminPackage.php');
     }
 }
@@ -193,10 +193,10 @@ if (isset($_GET['delete_id2'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($query_run) {
-        $_SESSION['success'] = "Admin account deleted";
+        $_SESSION['success'] = "Package deleted";
         header('Location: adminPackage.php');
     } else {
-        $_SESSION['status'] = "Cannot delete the admin account";
+        $_SESSION['status'] = "Cannot delete the Package";
         header('Location: adminPackage.php');
 }
 }
