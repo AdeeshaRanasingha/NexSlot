@@ -179,7 +179,8 @@ if (isset($_POST['add1'])) {
         $sql = "UPDATE package2 SET Features = '$features' WHERE ID = '$id'";
         
         if (mysqli_query($conn, $sql)) {
-            header('Location: adminPackage.php'); 
+            //header('Location: adminPackage.php'); 
+            echo "<script>windows.location.href='adminPackage.php';</script>";
         } 
         else {
             header('Location: adminPackage.php?erroesomething-went-wrong'); 
@@ -194,10 +195,10 @@ if (isset($_GET['delete_id2'])) {
 
     if ($query_run) {
         $_SESSION['success'] = "Package deleted";
-        header('Location: adminPackage.php');
+        echo "<script>windows.location.href='adminPackage.php';</script>";
     } else {
         $_SESSION['status'] = "Cannot delete the Package";
-        header('Location: adminPackage.php');
+        echo "<script>windows.location.href='adminPackage.php';</script>";
 }
 }
 
@@ -212,9 +213,9 @@ if (isset($_POST['add2'])) {
    
 
     if ($query_run) {
-        header('Location: adminPackage.php');
+        echo "<script>windows.location.href='adminPackage.php';</script>";
     } else {
-        header('Location: adminPackage.php');
+        echo "<script>windows.location.href='adminPackage.php';</script>";
     }
 }
 ?>
