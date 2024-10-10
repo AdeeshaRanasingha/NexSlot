@@ -1,7 +1,7 @@
 
 let bookedSlot = null;
 
-<<<<<<< HEAD
+
 
 function bookSlot(event) {
     const button = event.target; 
@@ -17,21 +17,7 @@ function bookSlot(event) {
         button.style.backgroundColor = "red"; 
         button.disabled = true; 
         alert(`Slot ${button.innerText} booked successfully!`); // Alert for successful booking
-=======
-function bookSlot(event) {
-    const button = event.target; 
-  
-    if (bookedSlot) {
-        alert("You can only book one slot at a time!"); 
-    } else if (button.style.backgroundColor === "red") {
-        alert("This slot is already booked!"); 
-    } else {
-       
-        bookedSlot = button.innerText; 
-        button.style.backgroundColor = "red"; 
-        button.disabled = true; 
-        alert(`Slot ${button.innerText} booked successfully!`); 
->>>>>>> 93117b3f47e46f776b3c594dd10c6634dacee898
+
     }
 }
 
@@ -46,5 +32,5 @@ function selectSlot(floor, slot){
 let bookedSlot = null;
 
     alert("selected");
-}
+};
 
