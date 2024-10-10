@@ -18,8 +18,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexSlot - User Account</title>
     <link rel="stylesheet" href="style/useraccount.css">
+    <script src="js\userAccount.js"></script>
 </head>
-<body>
+<body onload="setDate();greeting()">
+    <div class="time">
+        <h2 id="greet"></h2>
+        <h2 id="date"></h2>
+    </div>
 
     
     <div class="main">

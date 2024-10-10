@@ -1,10 +1,11 @@
- // Function to generate random floor and slot numbers
+ //  generate random floor and slot numbers
  function generateRandomNumbers() {
-    // Generate a random floor number between 1 and 10
-    const floorNumber = Math.floor(Math.random() * 10) + 1;
+
+    //  floor number between 1 and 10
+    const floorNumber = Math.floor(Math.random() * 5) + 1;
 
     // Generate a random slot number between 1 and 50
-    const slotNumber = Math.floor(Math.random() * 50) + 1;
+    const slotNumber = Math.floor(Math.random() * 11) + 1;
 
     // Set the generated numbers to the respective input fields
     document.getElementById('selectedFloor').value = floorNumber;

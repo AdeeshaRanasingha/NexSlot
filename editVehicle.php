@@ -55,10 +55,10 @@ if (isset($_GET['delete_id'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($query_run) {
-        $_SESSION['success'] = "Admin account deleted";
+        
         header('Location: editVehicle.php');
     } else {
-        $_SESSION['status'] = "Cannot delete the admin account";
+        
         header('Location: editVehicle.php');
 }
 }
@@ -79,7 +79,8 @@ if (isset($_GET['delete_id'])) {
     <h2>Edit vehicles</h2>
     <form method="post" action="">
         <div class="inputs">
-            <label for="admin_name">type</label><br>
+            <label >type</label><br>
+            <!-- if a value is there then show it if not hide it -->
             <input type="text" name="type" id="name" value="<?php echo isset($type) ? $type : '';?>" ><br><br>
 
             <label for="admin_username">Enter brand</label><br>
@@ -99,11 +100,11 @@ if (isset($_GET['delete_id'])) {
 
 
 
-    <!-- Admin Table -->
+    <!-- vehicle Table -->
     <div class="container" id="table-container">
     <h2>List of vehicles</h2>
     <br>
-    <!-- Fetch and Display List of Admins -->
+    <!-- Fetch and Display List of vehicles -->
     <table class="table">
         <thead>
             <tr>
@@ -113,6 +114,7 @@ if (isset($_GET['delete_id'])) {
                 <th>BRAND</th>
                 <th>MODEL</th>
                 <th>VEHICLE NO</th>
+                <th>ACTION</th>
             </tr>
         </thead>
         <tbody>
@@ -133,7 +135,7 @@ if (isset($_GET['delete_id'])) {
                     <td><?php echo $row['vehicleNo']; ?></td>
                     <td>
                         <a class='button' id='btn1' href='editVehicle.php?edit_id=<?php echo $row['vehicleID']; ?>'>Edit</a>
-                        <a class='button' id='btn2' href='editVehicle.php?delete_id=<?php echo $row['vehicleID']; ?>' onclick="return confirm('Are you sure you want to delete this admin?');">Delete</a>
+                        <a class='button' id='btn2' href='editVehicle.php?delete_id=<?php echo $row['vehicleID']; ?>' onclick="return confirm('Are you sure you want to delete this?');">Delete</a>
                     </td>
                 </tr>
                 <?php

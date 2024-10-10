@@ -56,10 +56,10 @@ if (isset($_GET['delete_id'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($query_run) {
-        $_SESSION['success'] = "Admin account deleted";
+        
         header('Location: viewReservationPremium.php');
     } else {
-        $_SESSION['status'] = "Cannot delete the admin account";
+        
         header('Location: viewReservationPremium.php');
 }
 }

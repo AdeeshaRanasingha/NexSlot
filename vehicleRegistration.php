@@ -15,7 +15,7 @@ if (!isset($_SESSION["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Registration</title>
     <link rel="stylesheet" href="style/vehicleRegistration.css">
-    <script src="js/vehicleRegitration.js"></script> <!-- Link to JS file -->
+    
 </head>
 
 <body>

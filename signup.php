@@ -48,7 +48,7 @@
             
             <input type="number" id="contact" name="contact" placeholder="Contact no." maxlength="10" required><br><br>
 
-            <button type="submit" class="signup_btn" name="submit">Sign Up</button><br><br>
+            <button type="submit" class="signup_btn" name="submit" onsubmit="validateForm()">Sign Up</button><br><br>
 
             <p>have an account?<a href="login.php"> Sign In</a></p>
             </form>
