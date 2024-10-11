@@ -28,7 +28,3 @@ function setDate() {
 
     document.getElementById("date").innerHTML = displayDay + ", " + todate + " of " + displayMonth;
 }
-function directUserInformation(){
-
-    window.location.href="user_information.php";
-}

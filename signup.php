@@ -29,24 +29,24 @@
             <input type="email" id="email" name="email" placeholder="E-Mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required><br><br>
 
             
-            <input type="password" id="password" name="password" placeholder="Password"  required>
+            <input type="password" id="password" name="password" placeholder="Password" required >
             <div class="pas">Minimum of 8 characters</div><br><br>
             
-            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password"  required onchange="confirmPassword()"><br><br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required  onchange="confirmPassword()"><br><br>
             
             
 
             
-            <input type="text" id="vehicle" name="vehicle" placeholder="Vehicle no."  required><br><br>
+            <input type="text" id="vehicle" name="vehicle" placeholder="Vehicle no."  ><br><br>
 
             
-            <input type="text" id="ID" name="ID" placeholder="ID no."  maxlength="13" required ><br><br>
+            <input type="text" id="ID" name="ID" placeholder="ID no."  maxlength="13"  ><br><br>
 
             
-            <input type="text" id="licence" name="licence" placeholder="Licence no." maxlength="10" required><br><br>
+            <input type="text" id="licence" name="licence" placeholder="Licence no." ><br><br>
 
             
-            <input type="number" id="contact" name="contact" placeholder="Contact no." maxlength="10" required><br><br>
+            <input type="number" id="contact" name="contact" placeholder="Contact no."  ><br><br>
 
             <button type="submit" class="signup_btn" name="submit" onsubmit="validateForm()">Sign Up</button><br><br>
 

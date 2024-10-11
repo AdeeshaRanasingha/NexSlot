@@ -9,13 +9,7 @@ function confirmPassword()//checking the same value entered in both password and
     }
 }
 
-//removing the data in email section
-function emailExist(){
-    alert("email already exist");
-    document.getElementById("email").value="";
-}
 
-// signup.js
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector('form');
@@ -34,11 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function validateForm() {
         let isValid = true;
         
-        // Validate password confirmation
-        if (passwordInput.value !== confirmPasswordInput.value) {
-            alert("Passwords do not match.");
-            isValid = false;
-        }
 
         // Validate password length (at least 8 characters)
         if (passwordInput.value.length < 8) {

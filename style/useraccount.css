@@ -1,4 +1,4 @@
-/* General styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -168,6 +168,7 @@ body {
     background-color: #00509e;
 }
 
+/* greeting */
 .time {
     text-align:right;
     margin-top: 20px;

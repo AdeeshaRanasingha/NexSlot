@@ -1,13 +1,12 @@
 <?php
 session_start();
-// Include database connection
+
+// database connection
 require_once 'database.php';
 
-// Enable error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
-// Check if the form was submitted
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Get data from the form
     $username = $_POST['username'];
@@ -24,15 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO reservation (username, nic, license_number, vehicle, date, start_time, end_time ,email , package , floor , slot)
             VALUES ('$username', '$nic', '$licenseNumber', '$vehicle', '$date', '$startTime', '$endTime' ,'{$_SESSION['email']}' , '{$_SESSION['package']}' , '$floor' , '$slot')";
 
-    // Print query for debugging
-    echo "Executing Query: " . $sql . "<br>";
+
 
     // Execute the query and check if successful
     if ($conn->query($sql) === TRUE) {
         header('location: basic.php');
         echo "New reservation created successfully";
     } else {
-        // Display error message if insertion fails
+      
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
