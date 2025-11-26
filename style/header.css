@@ -1,0 +1,91 @@
+body{
+    background-color: #f7f7f7;
+    margin: 0px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #001F3F;
+    font-size: 20px;
+    
+}
+
+.logo img {
+    height: 50px;
+    width: 100px;
+    
+}
+
+.menueBar ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+
+.menueBar ul li a {
+    text-decoration: none;
+    color: #d8e7f5;
+}
+
+
+img{
+    height: 100%;
+    width: 100%;
+}
+.menueBar ul li a:hover{
+    color: #FFD700;
+}
+.signin {
+    display: flex;
+    background-color: rgb(15, 147, 235);
+    align-items: center;
+    gap: 10px; 
+    text-decoration: none; 
+    padding: 10px;
+}
+
+.signin a {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: rgb(247, 247, 247); 
+    
+    gap: 10px;
+}
+
+.signin img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; /* circular image */
+    object-fit: cover; /* make sure the image fits inside the circle */
+    margin-right: 10px; 
+}
+
+.name {
+    display: flex;
+    
+    align-items: center;
+    gap: 10px; 
+    text-decoration: none; 
+}
+
+.name a {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: rgb(247, 247, 247); 
+    
+    gap: 10px;
+}
+
+.name img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; /* circular image */
+    object-fit: cover; /* make sure the image fits inside the circle */
+    margin-right: 10px; 
+}
